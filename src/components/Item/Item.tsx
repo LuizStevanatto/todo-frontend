@@ -18,7 +18,13 @@ export const Items = ({ text, onDeleteItem, id, isChecked, onChangeChecked }: II
 	return (
 		<ItemContainer>
 			<div>
-				<CustomRadio isChecked={check} changeState={() => onChangeChecked(id)}></CustomRadio>
+				<CustomRadio
+					isChecked={check}
+					changeState={() => {
+						setCheck((oldState) => !oldState);
+						onChangeChecked(id);
+					}}
+				></CustomRadio>
 			</div>
 			<ItemText isChecked={check}>{text}</ItemText>
 			<ExcludeIcon onClick={() => onDeleteItem(id)}>

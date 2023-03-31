@@ -51,14 +51,18 @@ export const Header = ({ urlImg }: IUrlProps) => {
 		[array]
 	);
 
-	const handleCheck = useCallback((id: number) => {
-		const newArray = array.map((item) => {
-			if (item.id === id) {
-				item.isChecked = !item.isChecked;
-			}
-			return item;
-		});
-	}, []);
+	const handleCheck = useCallback(
+		(id: number) => {
+			const newArray = array.map((item) => {
+				if (item.id === id) {
+					item.isChecked = !item.isChecked;
+				}
+				return item;
+			});
+			setArray(newArray);
+		},
+		[array]
+	);
 
 	return (
 		<Container urlImg={urlImg}>
