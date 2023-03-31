@@ -45,11 +45,11 @@ export const ExcludeIcon = styled.div`
 	color: #f1f1f1;
 	cursor: pointer;
 	opacity: 0.5;
-	background-color: red;
 	margin-bottom: 1rem;
 
 	/* hover */
 	:hover {
 		opacity: 1;
+		transition: 0.3s;
 	}
 `;
