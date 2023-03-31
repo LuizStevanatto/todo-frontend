@@ -32,7 +32,6 @@ export const Header = ({ urlImg }: IUrlProps) => {
 
 	const handleSubmitInputForm = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log(inputValue);
 		setInputValue("");
 	};
 
