@@ -5,10 +5,10 @@ import { ExcludeIcon, ItemContainer, ItemText } from "./style";
 
 interface IItemProps {
 	text: string;
-	onDeleteItem: (id: number) => void;
-	id: number;
+	onDeleteItem: (id: string) => void;
+	id: string;
 	isChecked: boolean;
-	onChangeChecked: (id: number) => void;
+	onChangeChecked: (id: string) => void;
 }
 
 export const Items = ({ text, onDeleteItem, id, isChecked, onChangeChecked }: IItemProps) => {
